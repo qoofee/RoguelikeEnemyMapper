@@ -1,11 +1,19 @@
-site_name: My Docs
+site_name: RoguelikeEnemyMapper
 
 theme:
   name: material
   palette:
-    primary: cyan
+    primary: deep purple
   features:
     - content.code.annotate 
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+
+plugins:
+  search:
+    lang: 'ja'
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -19,3 +27,22 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+    - Home:
+      - index.md
+    - 仕様:
+      - overview/index.md
+      - システムアーキテクチャ: overview/architecture.md
+      - 画面構成:
+        - ホーム画面: overview/Interface/HomePage.md
+        - 出現敵ナビ: overview/Interface/MapperPage.md
+        - アイテム識別: overview/Interface/AppraisalPage.md
+        - データベース作成: overview/Interface/CreateDatabasePage.md
+      - 機能:
+        - 出現敵ナビ: overview/Function/Mapper.md
+        - アイテム識別: overview/Function/Appraisal.md
+        - データベース作成: overview/Function/CreateDatabase.md
+      - データ構造: overview/DataStructure.md
+    - メモ:
+      - mkdocs: memo/mkdocs.md

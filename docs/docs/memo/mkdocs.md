@@ -1,12 +1,12 @@
 # mkdocs覚書
 
-## ビルド
+## ビルドコマンド
 
 ```
 mkdocs build
 ```
 
-## プレビュー
+## プレビューコマンド
 
 ```
 mkdocs serve
